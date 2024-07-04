@@ -1,0 +1,6 @@
+.container {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: linear-gradient(rgba(255, 255, 255, 0.47), #6c6c6c);
+}
