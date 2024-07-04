@@ -23,7 +23,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.59);
+    background-color: rgba(139, 239, 231, 0.4);
     padding: 15px 0;
     gap: 15px;
     transition: 0.4s;
@@ -45,4 +45,17 @@
     font-size: 18px;
     color: #13133a;
     font-weight: 500;
+    padding: 6px 0 ;
+}
+.user-info button {
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    transition: 0.3s;
+}
+.dismissal-user {
+    color: #2cf525;
+}
+.user-info button:active {
+    transform: scale(0.7);
 }

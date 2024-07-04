@@ -1,12 +1,16 @@
-import "./FiredUser.css"
+import "./DismissalUser.css"
 import {useContext} from "react";
 import AppContext from "../../../contex/store/index.jsx";
-import {data} from "../../../user-data/user-data.js";
+import { FaUserSlash } from "react-icons/fa";
 
-const FiredUser = () => {
+
+const DismissalUser = () => {
     const [state, dispatch] = useContext(AppContext)
 
-    console.log(state)
+    const dismissalUsers = (id) => {
+        dispatch({type: "REMOVE_USER", id})
+    }
+
     return (
         <div className="wrapper">
             {
@@ -16,7 +20,7 @@ const FiredUser = () => {
                         <div className="user-info">
                             <h2>{user.first_name} {user.last_name}</h2>
                             <p>{user.email}</p>
-                            <button>nimadir</button>
+                            <button className="remove-user" onClick={() => dismissalUsers(user.id)}><FaUserSlash/></button>
                         </div>
                     </div>
                 )
@@ -24,4 +28,4 @@ const FiredUser = () => {
         </div>
     )
 }
-export default FiredUser
+export default DismissalUser

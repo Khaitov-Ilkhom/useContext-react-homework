@@ -2,5 +2,5 @@
     width: 100%;
     min-height: 100vh;
     margin: 0 auto;
-    background: linear-gradient(rgba(255, 255, 255, 0.47), #6c6c6c);
+    background-image: linear-gradient(to right top, #4e227b, #4d459f, #4765c0, #3c86de, #33a6f9)
 }

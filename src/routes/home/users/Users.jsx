@@ -2,12 +2,14 @@ import "./Users.css"
 import {useContext} from "react";
 import AppContext from "../../../contex/store/index.jsx";
 import {data} from "../../../user-data/user-data.js";
+import { FaUserCheck } from "react-icons/fa";
+
 
 const Users = () => {
     const [state, dispatch] = useContext(AppContext)
 
     console.log(state)
-    const removeUser = (user) => {
+    const dismissalUser = (user) => {
         dispatch({type: "FIRED_USER", user})
     }
     return (
@@ -19,7 +21,7 @@ const Users = () => {
                         <div className="user-info">
                             <h2>{user.first_name} {user.last_name}</h2>
                             <p>{user.email}</p>
-                            <button onClick={() => removeUser(user)}>nimadir</button>
+                            <button className="dismissal-user" onClick={() => dismissalUser(user)}><FaUserCheck/></button>
                         </div>
                     </div>
                 )
