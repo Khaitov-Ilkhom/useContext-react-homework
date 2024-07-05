@@ -8,7 +8,6 @@ import { FaUserCheck } from "react-icons/fa";
 const Users = () => {
     const [state, dispatch] = useContext(AppContext)
 
-    console.log(state)
     const dismissalUser = (user) => {
         dispatch({type: "FIRED_USER", user})
     }
